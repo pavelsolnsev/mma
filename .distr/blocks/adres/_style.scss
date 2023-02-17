@@ -1,0 +1,20 @@
+.adres {
+    padding: 0 0 60px;
+    &__title {
+        @include vw("margin-bottom: 58px;");
+    }
+    &__map {
+        height: 350px;
+        @include vw("margin-bottom: 30px;");
+    }
+
+    &__list {
+        max-width: 518px;
+        li {
+            @include adaptiv-value("font-size", 18, 14, 14);
+            white-space: nowrap;
+            @include vw("margin-bottom: 20px;");
+            color: #05070F;
+        }
+    }
+}

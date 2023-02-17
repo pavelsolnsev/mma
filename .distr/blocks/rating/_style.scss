@@ -1,0 +1,75 @@
+.rating {
+    background: #232323;
+    @include vw("padding: 60px 0;");
+    &__title {
+        color: #fff;
+        @include adaptiv-value("margin-bottom", 32, 30, 30);
+    }
+
+    &__slider {
+        @include vw("margin: 0 -10px;");
+    }
+
+    &__item {
+        @include vw("padding: 0 10px;");
+    }
+
+    &__wrap {
+        display: block;
+    }
+
+    &__card {
+        position: relative;
+        @include vw("padding-top: 30px;");
+        @include adaptiv-value("margin-bottom", 15, 12, 12);
+        &-number {
+            position: absolute;
+            left: 0;
+            top: 0;
+            @include vw("width: 100px;");
+        }
+    }
+
+    &__content {
+        padding: 0 5px;
+        &-title {
+            font-weight: 700;
+            @include adaptiv-value("font-size", 25, 14, 16);
+            @include adaptiv-value("margin-bottom", 12, 8, 8);
+            color: #FFFFFF;
+            line-height: 93%;
+        }
+
+        &-weight {
+            @include adaptiv-value("font-size", 22, 12, 14);
+            color: #B5B5B5;
+        }
+    }
+
+    .slick-prev,
+    .slick-next {
+        position: absolute;
+        display: block;
+        z-index: 1;
+        color: transparent;
+        transform: translate(0, -50%);
+        background: radial-gradient(98.05% 261.61% at 1.95% 3.59%, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0) 100%);
+        backdrop-filter: blur(14px);
+        @include vw("right: 35px;");
+        @include vw("border-radius: 20px;");
+        @include vw("width: 60px;");
+        @include vw("height: 93px;");
+        top: 35%;
+        &:before {
+            display: none;
+        }
+        &:after {
+            content: url('../img/rating/arrow-r.png');
+        }
+    }
+
+    .slick-prev {
+        display: none !important;
+    }
+
+}

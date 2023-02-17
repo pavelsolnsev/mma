@@ -1,0 +1,94 @@
+.events {
+    background: #363741;
+    @include vw("padding: 85px 0;");
+
+    &__title {
+        @include adaptiv-value("font-size", 52, 28, 28);
+        @include vw("margin-bottom: 44px;");
+        color: #FFFFFF;
+
+        &:after {
+            display: none;
+        }
+    }
+
+    &__box {
+        background: url('../img/events/bg.jpg') no-repeat center center / cover;
+        @include vw("padding: 25px 100px 0 100px;");
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    &__head {
+        &-title {
+            font-family: $DrukTextWideCyr;
+            font-weight: 700;
+            @include vw("font-size: 18px;");
+            @include vw("margin-bottom: 8px;");
+            color: $red;
+        }
+
+        &-date {
+            @include vw("font-size: 32px;");
+            color: #D9D9D9;
+
+        }
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @include vw("max-width: 683px;");
+            width: 100%;
+        }
+
+        &-block {
+            flex: 0;
+        }
+
+        &-name {
+            font-weight: 500;
+            @include vw("font-size: 44px;");
+            @include vw("margin-bottom: 10px;");
+            line-height: 120%;
+            color: #FFFFFF;
+            font-family: $DrukTextWideCyr;
+        }
+
+        &-vs {
+            @include vw("width: 103px;");
+        }
+
+        &-country {
+            @include vw("font-size: 24px;");
+            color: #D9D9D9;
+        }
+
+        &-fighters {
+            @include vw("height: 339px;");
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        &-photo {
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            position: relative;
+            &_l {
+                @include vw("width: 406px;");
+                @include vw("left: 50px;");
+                height: 100%;
+            }
+            &_r {
+                @include vw("width: 481px;");
+                height: 100%;
+            }
+        }
+    }
+}

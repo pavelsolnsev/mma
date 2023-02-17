@@ -1,0 +1,111 @@
+.footer {
+    background: #070101;
+    color: #fff;
+    @include vw("padding: 70px 0 50px;");
+
+    &__box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.75);
+        @include vw("padding-bottom: 62px;");
+    }
+
+    &__logo {
+        @include vw("max-width: 175px;");
+        margin-right: 7%;
+    }
+
+    &__form {
+        @include adaptiv-value("max-width", 440, 298, 298);
+        margin-right: 7%;
+        width: 100%;
+        display: none;
+    }
+
+    &__list {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        @include vw("max-width: 920px;");
+        width: 100%;
+
+        li {
+            width: 100%;
+            max-width: 50%;
+            flex: 0 0 50%;
+            padding: 0 5px;
+            @include vw("margin-bottom: 20px;");
+
+            a {
+                @include adaptiv-value("font-size", 18, 9, 16);
+                line-height: 133%;
+                color: #ffffff;
+                white-space: nowrap;
+                strong {
+                    display: block;
+                }
+            }
+        }
+        &-faq {
+            display: flex;
+            align-items: center;
+            a {
+                border: 1px solid #ffffff;
+                border-radius: 4px;
+                max-width: 166px;
+                height: 40px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        &-item {
+            div {
+                display: flex;
+                a {
+                    margin-right: 8px;
+                }
+                &:first-child {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include vw("padding-top: 32px;");
+
+        &-date {
+            @include vw("font-size: 18px;");
+            line-height: 133%;
+            color: #ffffff;
+        }
+
+        &-text {
+            line-height: 120%;
+            @include adaptiv-value("max-width", 608, 298, 298);
+            @include adaptiv-value("font-size", 16, 10, 16);
+            color: #ffffff;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+
+            li {
+                @include vw("margin-right: 25px;");
+                @include vw("width: 30px;");
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}

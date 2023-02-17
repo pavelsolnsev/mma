@@ -1,0 +1,84 @@
+@import '_functions';
+
+// Функция для пересчёта размеров из 'px' в 'vw'
+@function vw($value, $bp) {
+    $ratio: ($bp/100);
+    $result: ($value/$ratio);
+    @return #{$result}vw;
+    // @return $result;
+}
+
+
+// Миксин для вывода размеров в 'px' и 'vw'
+// @include vw('padding: 24px 75px 17px 62px');
+@mixin vw($str, $bp: 1920) {
+    $result_vw: '';
+    $str: str-replace($str, ';', '');
+    $str_split: str-split($str, ':');
+
+    $attribute: nth($str_split, 1);
+    $values: unquote(nth($str_split, 2));
+    $values_split: str-split($values, ' ');
+
+    @each $value in $values_split {
+        @if ($value !='') {
+            // @debug '$value in ~' + $value + '~';
+            $value: to-number(quote($value));
+            $value: vw($value, $bp);
+            // @debug '$value out ~' + $value + '~';
+            $result_vw: $result_vw + $value + ' ';
+        }
+    }
+
+    // @debug '$result_vw ~' + $result_vw + '~';
+
+    #{$attribute}: $values; // Статичный размер для разрешений больше 1920
+
+    @media (max-width: #{$bp}px) {
+        #{$attribute}: #{$result_vw}; // Динамичный размер для разрешений меньше 1920
+    }
+}
+
+// Динамичные размеры для шрифта
+
+// $maxWidth: 1920;
+
+// @mixin adaptiv-font($pcSize, $tabSize, $mobSize) {
+//     $addSize: $pcSize - $mobSize;
+//     $addSize: $pcSize - $tabSize;
+//     $addMobSize: $addSize + $addSize * 0.7;
+
+// 	@media (min-width: 1199px) {
+// 		font-size: calc(#{$tabSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
+// 	}
+//     @media (max-width: 1199px) {
+//         font-size: calc(#{$tabSize + px} + #{$addSize} * ((100vw - 992px) / #{$maxWidth}));
+//     }
+//     @media (max-width: 574px) {
+//         font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 360px) / #{$maxWidth}));
+//     }
+// }
+
+// @include adaptiv-value("padding", 50, 20, 10);
+$maxWidth: 1920;
+$tabWidth: 1200;
+$mobWidth: 575;
+
+@mixin adaptiv-value($property, $descSize, $tabSize, $mobSize) {
+    $addSize: $descSize - $mobSize;
+    $addSize2: $descSize - $tabSize;
+
+    @media (min-width: #{$maxWidth + px}) {
+        #{$property}: $descSize + px;
+	}
+    @media (max-width: #{$maxWidth + px}) {
+        #{$property}: calc(#{$descSize + px} + #{$addSize2} * ((100vw - 1920px) / #{$maxWidth - 360}));
+	}
+    @media (max-width: #{$tabWidth + px}) {
+        #{$property}: calc(#{$tabSize + px} + #{$addSize2} * ((100vw - 992px) / #{$maxWidth - 992}));
+    }
+
+    @media (max-width: #{$mobWidth + px}) {
+        #{$property}: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 360px) / #{$maxWidth - 360}));
+    }
+}

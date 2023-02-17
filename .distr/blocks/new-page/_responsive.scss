@@ -1,0 +1,51 @@
+.new-page {
+    @media (max-width: 1440px) {}
+
+    @media (max-width: 1199px) {}
+
+    @media (max-width: 992px) {
+        &__fights {
+            .rating__content-title {
+                color: #232323;
+                font-size: 14px;
+            }
+
+            .rating__content-weight {
+                font-size: 12px;
+            }
+
+            .rating__item {
+               max-width: 128px;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {}
+
+    @media (max-width: 575px) {
+        &__wrapper {
+            display: block;
+        }
+
+        &__fights {
+            .rating__content-title {
+                color: #232323;
+                font-size: 16px;
+            }
+
+            .rating__content-weight {
+                font-size: 14px;
+            }
+
+            .rating__item {
+               max-width: 100%;
+            }
+            
+            .slick-list {
+                padding-right: 130px;
+            }
+
+        }
+    }
+
+}

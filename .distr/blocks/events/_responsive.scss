@@ -1,0 +1,99 @@
+.events {
+    @media (max-width: 1199px) {}
+
+    @media (max-width: 992px) {
+        
+    }
+
+    @media (max-width: 767px) {
+        padding: 40px 0 20px;
+
+        &__title {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #FFFFFF;
+
+            &:after {
+                display: none;
+            }
+        }
+
+        &__box {
+            background: url('../img/events/bg-tab.jpg') no-repeat center center / cover;
+            padding: 20px 0 0 0;
+            border-radius: 12px;
+        }
+
+        &__head {
+            padding-left: 30px;
+            margin-bottom: 16px;
+            &-title {
+                font-size: 12px;
+                margin-bottom: 8px;
+            }
+
+            &-date {
+                font-size: 16px;
+            }
+        }
+        
+
+        &__body {
+            flex-direction: column;
+            align-items: flex-start;
+
+            &-content {
+                max-width: 100%;
+                margin: 0 auto;
+                padding: 0 30px;
+                margin-bottom: 27px;
+            }
+
+            &-name {
+                font-size: 18px;
+                margin-bottom: 8px;
+            }
+
+            &-vs {
+                width: 48px;
+            }
+
+            &-country {
+                font-size: 16px;
+                color: #D9D9D9;
+            }
+
+            &-fighters {
+                height: 100px;
+                justify-content: space-between;
+                position: relative;
+
+                &:after {
+                    content: '';
+                    background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+                    border-radius: 12px;
+                    height: 48px;
+                    width: 100%;
+                    position: absolute;
+                    bottom: 0;
+                }
+            }
+
+            &-photo {
+                background-position: bottom;
+                border-radius: 12px;
+                &_l {
+                    width: 130px;
+                    position: static;
+                    left: 0;
+                }
+
+                &_r {
+                    width: 130px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 359px) {}
+}

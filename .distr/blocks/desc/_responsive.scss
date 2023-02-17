@@ -1,0 +1,16 @@
+.desc {
+@media (max-width: 1199px) {
+    &__box {
+        padding: 35px 15px;
+    }
+}
+@media (max-width: 991px) {
+}
+@media (max-width: 767px) {
+    &__box {
+        padding: 15px 10px;
+    }
+}
+@media (max-width: 575px) {
+}
+}

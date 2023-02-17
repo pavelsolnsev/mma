@@ -1,0 +1,112 @@
+.new-page {
+    @include adaptiv-value("padding-top", 80, 60, 30);
+    @include adaptiv-value("padding-bottom", 141, 80, 60);
+
+    &__content {
+        @include adaptiv-value("margin-bottom", 60, 30, 30);
+        @include adaptiv-value("max-width", 1290, 755, 755);
+    }
+
+    &__subtitle {
+        @include adaptiv-value("font-size", 18, 16, 12);
+        @include adaptiv-value("margin-bottom", 24, 12, 10);
+        color: $red;
+    }
+
+    &__title {
+        @include adaptiv-value("font-size", 42, 28, 19);
+        @include adaptiv-value("margin-bottom", 24, 12, 10);
+    }
+
+    &__desc {
+        @include adaptiv-value("font-size", 26, 20, 16);
+        @include adaptiv-value("margin-bottom", 24, 12, 10);
+        line-height: 130%;
+        color: #232323;
+    }
+
+    &__time {
+        @include adaptiv-value("font-size", 18, 16, 12);
+        display: block;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__box {
+        @include adaptiv-value("max-width", 1116, 542, 542);
+    }
+
+    &__text {
+        @include adaptiv-value("max-width", 850, 450, 450);
+
+        p {
+            @include adaptiv-value("font-size", 22, 16, 16);
+            line-height: 160%;
+            color: #232323;
+            @include adaptiv-value("margin-bottom", 35, 30, 15);
+        }
+    }
+
+    &__img {
+        @include adaptiv-value("margin-bottom", 60, 30, 15);
+    }
+
+    &__block {
+        @include adaptiv-value("margin-bottom", 120, 80, 60);
+    }
+
+    &__fights {
+        @include adaptiv-value("margin-bottom", 60, 40, 30);
+
+        &-title {
+            @include adaptiv-value("font-size", 24, 16, 16);
+            @include adaptiv-value("margin-bottom", 40, 20, 15);
+            font-weight: 500;
+        }
+
+        .rating__content-title {
+            color: #232323;
+            @include adaptiv-value("font-size", 30, 16, 16);
+        }
+
+        .rating__card {
+            padding-top: 0;
+        }
+
+        .rating__item {
+            padding: 0 10px;
+            @include adaptiv-value("max-width", 250, 128, 500);
+        }
+    }
+
+    &__slider {
+        display: flex;
+        margin: 0 -10px;
+    }
+
+    &__events {
+        &-title {
+            @include adaptiv-value("font-size", 24, 16, 16);
+            @include adaptiv-value("margin-bottom", 40, 20, 15);
+            font-weight: 500;
+        }
+
+        .catalog__col {
+            flex: 0 0 100%;
+            padding: 0;
+            @include adaptiv-value("max-width", 424, 291, 320);
+        }
+
+        .catalog__content-title {
+            color: #232323;
+        }
+
+        .catalog__content-subtitle {
+            color: #979797;
+        }
+
+    }
+}

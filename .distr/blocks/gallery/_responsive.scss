@@ -1,0 +1,38 @@
+.gallery {
+    @media (max-width: 1199px) {
+        .slick-prev,
+        .slick-next {
+            @include vw("right: 35px;");
+            @include vw("border-radius: 20px;");
+            width: 32px;
+            height: 50px;
+            border-radius: 10.8017px;
+            right: 30px;
+            &:after {
+                content: url("../img/rating/arrow-r-tab.png");
+            }
+        }
+    }
+    @media (max-width: 991px) {
+    }
+    @media (max-width: 767px) {
+        &__title {
+            margin-bottom: 23px;
+            &.title {
+                justify-content: inherit;
+            }
+        }
+    }
+    @media (max-width: 500px) {
+        &__slider {
+            margin: 0;
+        }
+
+        &__item {
+            margin: 0 20px 0 0;
+        }
+        .slick-list {
+            padding-right: 80px;
+        }
+    }
+}

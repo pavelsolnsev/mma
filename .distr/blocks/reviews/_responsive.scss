@@ -1,0 +1,267 @@
+.reviews {
+    @media (max-width: 1600px) {
+        &__banner {
+            display: none;
+        }
+    }
+
+    @media (max-width: 1199px) {
+        &__title {
+            img {
+                &:nth-child(1) {
+                    max-width: 17px;
+                }
+            }
+        }
+
+        &__video {
+            margin-bottom: 28px;
+
+            &-live {
+                font-size: 9px;
+                padding: 4px 8px;
+                top: 18px;
+                left: 21px;
+            }
+        }
+
+        &__desc {
+            &-online {
+                
+                span {
+                    &:first-child {
+                        &:after {
+                            width: 2px;
+                            height: 2px;
+                            margin: -4px 5px 0 5px;
+                        }
+                    }
+                }
+            }
+
+            &-social {
+                max-width: 113px;
+
+                a {
+                    &:nth-child(1) {
+                        img {
+                            width: 17px;
+                            height: 13px;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        img {
+                            width: 8px;
+                            height: 17px;
+
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        img {
+                            width: 18px;
+                            height: 10px;
+                        }
+                    }
+
+                    &:nth-child(4) {
+                        img {
+                            width: 18px;
+                            height: 15px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    @media (max-width: 992px) {
+        padding: 60px 0;
+
+        &__title {
+            margin-bottom: 32px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        &__form {
+            align-items: flex-start;
+
+            button {
+                height: 41px;
+                max-width: 100%;
+            }
+
+            textarea {
+                height: 41px;
+                margin-right: 0;
+                margin-bottom: 12px;
+                padding: 10px;
+            }
+
+            div {
+                flex-direction: column;
+            }
+        }
+    }
+
+    @media (max-width: 575px) {
+        padding: 45px 0;
+
+        .acco-content-rv {
+            background: #363741;
+        }
+
+        &.acco {
+            padding: 0 0 10px;
+            .version-event-v2-page & {
+                padding: 0;
+            }
+
+            .reviews__section {
+                position: static;
+            }
+
+            .reviews__wrapper {
+                // background: #fff;
+                padding-top: 12px;
+                padding-bottom: 12px;
+            }
+
+            .reviews__content {
+                height: 323px;
+                overflow: scroll;
+            }
+
+            // .reviews__title,
+            // .reviews__head-name,
+            // .reviews__text {
+            //     color: #232323;
+            // }
+
+            .reviews__form div {
+                flex-direction: row;
+            }
+
+            .reviews__form textarea {
+                margin-bottom: 0;
+                margin-right: 12px;
+            }
+
+            .reviews__form button {
+                flex: 0 0 41px;
+                width: 41px;
+                position: relative;
+
+                &::before {
+                    content: url('../img/reviews/textarea.svg');
+                    position: absolute;
+                    top: 55%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    display: block;
+                }
+
+                span {
+                    display: none;
+                }
+            }
+
+            .reviews__form img {
+                display: none;
+            }
+
+            .reviews__like div span {
+                color: #7B7E8A;
+            }
+
+            .reviews__bg {
+                .version-event-v2-page & {
+                    background: #F3F3F5;
+                }
+
+                background: #363741;
+                cursor: pointer;
+
+                .reviews__title {
+                    margin-bottom: 0;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    font-size: 14px;
+                    color: #fff;
+                    .version-event-v2-page & {
+                        color: #242424;
+                    }
+
+                    img {
+                        max-width: inherit;
+                        height: auto;
+
+                        &:nth-child(1) {
+                            display: none;
+                        }
+
+                        &:nth-child(2) {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__title {
+            margin-bottom: 24px;
+        }
+
+        &__box {
+            padding-right: 0;
+        }
+
+        .reviews-logo {
+            max-width: 45px;
+        }
+
+        &__item {
+            margin-bottom: 20px;
+
+            &-answer {
+                padding-left: 55px;
+            }
+        }
+
+        &__head {
+            &-logo {
+                margin-bottom: 12px;
+            }
+        }
+
+        &__video {
+            max-width: 400px;
+            margin: 0 0 20px 0;
+
+            &-picture {
+                border-radius: inherit;
+            }
+
+            &-overlay {
+                padding: 17px 35px;
+            }
+        }
+
+        &__desc {
+            padding-bottom: 15px;
+
+            &-social {
+                display: none;
+            }
+
+            &-online {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    }
+
+}

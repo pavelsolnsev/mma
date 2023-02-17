@@ -1,0 +1,108 @@
+.main {
+    padding: 40px 0 60px;
+    &__search {
+        display: flex;
+        height: 50px;
+        @include vw("margin-bottom: 40px;");
+        position: relative;
+        ::placeholder {
+            /* Chrome/Opera/Safari/Firefox */
+            color: #979797;
+        }
+
+        :-ms-input-placeholder {
+            /* IE 10+ */
+            color: #979797;
+        }
+
+        input {
+            width: 100%;
+            font-size: 18px;
+            @include vw("padding-left: 25px;");
+            @include vw("border-radius: 48px;");
+            height: 100%;
+            outline: none;
+            background: transparent;
+            border: 1.5px solid #979797;
+            color: #979797;
+        }
+
+        button {
+            width: 17px;
+            height: 17px;
+            @include vw("right: 25px;");
+            border: none;
+            color: transparent;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            background: url('../img/main/search.png') no-repeat;
+        }
+    }
+
+    &__banner {
+        @include vw("margin-bottom: 60px;");
+    }
+
+    .event {
+        &__item {
+            @include vw("padding: 0 15px;");
+        }
+
+        &__slider {
+            @include vw("margin: 0 -15px");
+        }
+
+        &__wrap {
+            display: block;
+        }
+
+        &__img {
+            @include vw("border-radius: 20px;");
+            @include vw("margin-bottom: 20px;");
+        }
+
+        &__content {
+            &-date {
+                @include adaptiv-value("font-size", 20, 12, 14);
+                @include vw("margin-bottom: 10px;");
+                color: #979797;
+                span {
+                    display: flex;
+                    align-items: center;
+
+                    &:first-child {
+                        &:after {
+                            content: '';
+                            @include vw("width: 4px;");
+                            @include vw("height: 4px;");
+                            @include vw("margin: 0 10px;");
+                            background: #222222;
+                            display: block;
+                            border-radius: 100%;
+                        }
+                    }
+                }
+            }
+
+            &-title {
+                font-weight: 500;
+                font-family: $DrukTextWideCyr;
+                line-height: 145%;
+                @include adaptiv-value("font-size", 22, 12, 14);
+            }
+
+            .test {
+                font-weight: 500;
+                font-family: $DrukTextWideCyr;
+                line-height: 145%;
+                font-size: 22px;
+            }
+        }
+    }
+
+    .slick-list {
+        @include vw("padding-right: 300px;");
+    }
+}

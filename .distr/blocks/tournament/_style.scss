@@ -1,0 +1,200 @@
+.tournament {
+    &__title {
+        margin-bottom: 60px;
+    }
+
+    &__tabs {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+        li {
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 120%;
+            color: #b8bbc6;
+            margin-right: 36px;
+            cursor: pointer;
+            &:last-child {
+                margin-right: 0;
+            }
+            &.active {
+                color: #05070f;
+            }
+        }
+    }
+
+    &__bg {
+        padding: 60px;
+        color: #fff;
+        background: url("../img/tournament/bg.jpg") no-repeat center center / cover;
+        &-tabs {
+            display: flex;
+            align-items: center;
+            margin-bottom: 127px;
+        }
+        &-item {
+            max-width: 101px;
+            cursor: pointer;
+            width: 100%;
+            height: 35px;
+            background: #7b7e8a;
+            border-radius: 2px;
+            color: #414552;
+            font-weight: 500;
+            font-size: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 3px;
+            margin-right: 70px;
+            &.current {
+                background: #f3f3f5;
+                color: #232323;
+                font-weight: bold;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        &-icon {
+            position: relative;
+            top: 3px;
+            cursor: pointer;
+            &.current {
+                path {
+                    fill: #f3f3f5;
+                }
+            }
+        }
+    }
+    
+    &__grid {
+        display: flex;
+        &-box {
+            display: flex;
+            flex-direction: column;
+            margin-right: 4%;
+            max-width: 260px;
+            width: 100%;
+            &.box_1 {
+                .tournament__grid-item {
+                    &::after {
+                        background: url("../img/tournament/line.svg") no-repeat center center / cover;
+                        width: 62px;
+                        height: 96px;
+                    }
+                }
+            }
+            &.box_2 {
+                .tournament__grid-item {
+                    &::after {
+                        background: url("../img/tournament/line-2.svg") no-repeat center center / cover;
+                        width: 55px;
+                        height: 195px;
+                    }
+                }
+            }
+            &.box_3 {
+                .tournament__grid-item {
+                    &::after {
+                        background: url("../img/tournament/line-3.svg") no-repeat center center / cover;
+                        width: 54px;
+                        height: 380px;
+                    }
+                }
+            }
+            &.box_4 {
+                .tournament__grid-item {
+                    &::after {
+                        background: url("../img/tournament/line-4.svg") no-repeat center center / cover;
+                        width: 55px;
+                        height: 754px;
+                    }
+                }
+            }
+        }
+        &-item {
+            position: relative;
+            margin-bottom: 17px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            &::after {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translate(100%, -50%);
+                content: "";
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .tournament-card {
+        position: relative;
+        background: #ffffff;
+        border-radius: 8.48061px;
+        padding: 5px 20px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 17px;
+
+        &::before {
+            content: "";
+            height: 100%;
+            width: 8px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: linear-gradient(to top, #0048ff 50%, #e20613 50%);
+            display: block;
+            border-radius: 8.69565px 0px 0px 8.69565px;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &__item {
+            display: flex;
+            align-items: center;
+            padding: 5px 0;
+            &:first-child {
+                border-bottom: 0.706718px solid rgba(134, 134, 134, 0.17);
+            }
+            &-img {
+                height: 24px;
+                width: 24px;
+                display: block;
+                background-position: center center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                flex: 0 0 auto;
+            }
+            &-name {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 150.5%;
+                color: #000000;
+                display: block;
+                position: relative;
+                top: 3px;
+                margin-left: 10px;
+            }
+
+            &-flag {
+                height: 10px;
+                width: 14px;
+                display: block;
+                background-position: center center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                flex: 0 0 auto;
+                position: relative;
+                top: 2px;
+                margin-left: auto;
+            }
+        }
+    }
+}

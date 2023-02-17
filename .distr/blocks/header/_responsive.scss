@@ -1,0 +1,200 @@
+.header {
+    @media (max-width: 1440px) {
+        min-height: 100px;
+        &__logo {
+            max-width: 117px;
+            margin-right: 40px;
+        }
+
+        &__menu {
+            max-width: 465px;
+
+            a {
+                font-size: 16px;
+            }
+            &-live {
+                &::after {
+                    font-size: 12px;
+                    padding: 4px;
+                    margin-left: 7px;
+                }
+            }
+        }
+
+        &__avatar {
+            max-width: 47px;
+        }
+
+        &__login {
+            span {
+                font-size: 16px;
+                margin-right: 18px;
+            }
+        }
+    }
+
+    @media (max-width: 1199px) {
+        min-height: 70px;
+        background: #05070F;
+        &.active {
+            min-height: 60px; 
+        }
+        &__logo {
+            max-width: 58px;
+            margin-right: 50px;
+        }
+
+        &__menu {
+            max-width: 340px;
+
+            a {
+                font-size: 12px;
+            }
+        }
+
+        &__login {
+            height: 20px;
+
+            span {
+                font-size: 12px;
+                margin-right: 12px;
+            }
+        }
+
+        &__avatar {
+            max-width: 32px;
+        }
+
+        &__wrap {
+            max-width: 144px;
+            margin-right: 18px;
+        }
+
+        &__search {
+            height: 20px;
+
+            input {
+                font-size: 9px;
+                padding-left: 29px;
+                padding-top: 4px;
+            }
+
+            button {
+                width: 13px;
+                height: 13px;
+            }
+        }
+
+        &__button {
+            padding: 7px 20px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        &__logo {
+            margin-right: 0;
+        }
+
+        &__menu {
+            max-width: 260px;
+        }
+
+        &__wrap {
+            max-width: 100%;
+        }
+
+        &__search {
+            width: auto;
+        }
+    }
+
+    @media (max-width: 575px) {
+        align-items: flex-start;
+        background: #161616 !important;
+        min-height: 111px;
+        &.active {
+            .header__menu {
+                margin-top: 10px;
+            }
+        }
+        &__content {
+            flex-wrap: wrap;
+            padding: 13px 0;
+        }
+
+        &__logo {
+            max-width: 60px;
+        }
+
+        &__menu {
+            max-width: 100%;
+            order: 1;
+            margin-top: 20px;
+            ul {
+                justify-content: space-between;
+            }
+            li {
+                margin-right: 0;
+            }
+        }
+
+        &__avatar {
+            max-width: 40px;
+        }
+
+        &__login {
+            position: relative;
+
+            span {
+                display: none;
+            }
+
+            button {
+                display: block;
+                width: 17px;
+                height: 17px;
+                border: none;
+                color: transparent;
+                cursor: pointer;
+                position: absolute;
+                right: 60px;
+                top: 50%;
+                transform: translate(0, -50%);
+                background: url('../img/header/search.svg') no-repeat;
+            }
+        }
+
+        &__banner {
+            display: none;
+            .version-main & {
+                display: block;
+            }
+        }
+
+        &__search {
+            max-width: 40px;
+            margin-right: 0;
+
+            ::placeholder {
+                /* Chrome/Opera/Safari/Firefox */
+                color: transparent;
+            }
+
+            :-ms-input-placeholder {
+                /* IE 10+ */
+                color: transparent;
+            }
+
+            input {
+                background: transparent;
+                color: transparent;
+            }
+
+            button {
+                width: 17px;
+                height: 17px;
+                background: url('../img/header/search.svg') no-repeat;
+            }
+        }
+    }
+}

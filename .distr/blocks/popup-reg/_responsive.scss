@@ -1,0 +1,96 @@
+.popup-reg {
+    @media (max-width: 1199px) {
+    }
+    @media (max-width: 991px) {
+    }
+    @media (max-width: 767px) {
+        &__box {
+            padding: 20px 20px;
+        }
+        &__logo {
+            margin-bottom: 10px;
+        }
+
+        .form {
+            &__text {
+                margin-bottom: 15px;
+            }
+
+            &__item {
+                margin-bottom: 15px;
+            }
+
+            &__input {
+                height: 30px;
+            }
+
+            &__button {
+                height: 30px;
+            }
+        }
+    }
+    @media (max-width: 575px) {
+    }
+    @media (max-width: 359px) {
+    }
+}
+
+.popup-user {
+    @media (max-width: 991px) {
+        .popup-user__box {
+            padding: 20px;
+        }
+    }
+}
+
+.popup-verification,
+.popup-success {
+    @media (max-width: 767px) {
+        .popup-user__box {
+            max-width: 645px;
+            padding: 60px 40px;
+        }
+        .form {
+            &__items {
+                flex-direction: column;
+            }
+            &__skip {
+                margin-left: 0;
+                margin-top: 15px;
+            }
+        }
+    }
+}
+.popup-faq {
+    @media (max-width: 767px) {
+        .popup-user__box {
+            padding: 70px 25px;
+        }
+    }
+}
+
+.popup-application {
+    @media (max-width: 1199px) {
+        
+    
+    }
+    @media (max-width: 991px) {
+    }
+    @media (max-width: 767px) {
+        &__button {
+            &-send,
+            &-canсel {
+                max-width: 155px;
+            }
+    
+            &-send {
+                margin-right: 10px;
+            }
+    
+            &-canсel {
+                color: #232323;
+                background: #f3f3f5;
+            }
+        }
+    }
+}

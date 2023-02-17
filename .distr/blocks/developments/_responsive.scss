@@ -1,0 +1,30 @@
+.developments {
+@media (max-width: 1199px) {
+}
+@media (max-width: 991px) {
+}
+@media (max-width: 767px) {
+}
+@media (max-width: 575px) {
+    &__head {
+        margin-bottom: 10px;
+    }
+    &__item {
+        padding: 13px;
+        margin-bottom: 0;
+        img {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+    }
+
+    .slick-list {
+        padding-right: 120px;
+        margin: 0 -5px;
+    }
+
+    .slick-slide {
+        margin: 0 5px;
+    }
+}
+}

@@ -1,0 +1,94 @@
+.news-page {
+    @include vw("padding: 80px 0;");
+    
+    &__title {
+        @include vw("margin-bottom: 54px;");
+    }
+
+    &__box {
+        display: flex;
+        width: 100%;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    &__content {
+        @include vw("margin: 0 -15px;");
+        &-top {
+            width: 75%;
+        }
+    }
+
+    &__tabs {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        @include vw("margin-bottom: 44px;");
+
+        a {
+            background: #FFFFFF;
+            box-shadow: -6px 0px 30px rgba(120, 120, 120, 0.15);
+            @include vw("border-radius: 4px;");
+            @include vw("padding: 12px 15px 9px 15px;");
+            @include vw("font-size: 16px;");
+            @include vw("margin-right: 16px;");
+            color: #232323;
+            cursor: pointer;
+            transition: ease all .3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:last-child {
+                margin-right: 0;
+            }
+            &:hover {
+                background: $red;
+                color: #fff;    
+            }
+        }
+    }
+
+    &__col {
+        @include vw("margin-bottom: 80px;");
+        @include vw("padding: 0 15px;");
+    }
+
+    &__item {
+        position: relative;
+        display: block;
+    }
+
+    &__text {
+        position: absolute;
+        @include vw("bottom: 32px;");
+        @include vw("left: 32px;");
+        @include vw("max-width: 510px;");
+
+        &-head {
+            display: flex;
+            align-items: center;
+            @include vw("margin-bottom: 10px;");
+        }
+
+        &-white {
+            span {
+                color: #fff;
+            }
+        }
+
+        h3 {
+            font-family: $DrukTextWideCyr;
+            font-style: normal;
+            font-weight: 500;
+            @include vw("font-size: 20px;");
+            @include vw("line-height: 28px;");
+            color: #FFFFFF;
+            max-width: 100%;
+            text-shadow: 1px 1px 4px #000;
+        }
+    }
+
+    &__img {
+        position: relative;
+        @include vw("margin-bottom: 32px;");
+    }
+}

@@ -1,0 +1,35 @@
+.popular {
+    width: 40%;
+    padding-right: 8%;
+    .version-news-page & {
+        @include vw("padding-left: 40px;");
+        padding-right: 0;
+        width: 25%;
+    }
+    &-title {
+        @include adaptiv-value("font-size", 28, 14, 24);
+        @include adaptiv-value("margin-bottom", 32, 24, 30);
+        font-family: $DrukTextWideCyr;
+        font-weight: 700;
+        color: #232323;
+
+        img {
+            display: none;
+        }
+    }
+    &-item {
+        display: block;
+        border-bottom: 1px solid #C6C6C6;
+        @include vw("padding-bottom: 20px;");
+        @include vw("margin-bottom: 25px;");
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &-button {
+        display: none;
+        background: transparent;
+    }
+}

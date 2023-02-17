@@ -1,0 +1,85 @@
+.main-page {
+
+    @media (max-width: 1440px) {}
+
+    @media (max-width: 1199px) {
+        padding: 130px 0 47px;
+        &__date {
+            max-width: 123px;
+            height: 27px;
+            margin-bottom: 22px;
+        }
+
+        &__title {
+            margin-bottom: 22px;
+        }
+
+        &__subtitle {
+            margin-bottom: 32px;
+        }
+
+        &__content {
+            max-width: 565px;
+        }
+
+        &__button {
+            height: 35px;
+
+            &-buy {
+                max-width: 150px;
+                border-radius: 4px;
+            }
+
+            &-reg {
+                max-width: 226px;
+                border: 0.688889px solid #E8E9EC;
+                border-radius: 4px;
+            }
+        }
+    }
+
+    @media (max-width: 991px) {}
+
+    @media (max-width: 575px) {
+        padding: 0;
+        background: url('../img/main-page/bg-mob.jpg') no-repeat center bottom / 100%;
+
+        &__date {
+            margin-bottom: 20px;
+            max-width: 111px;
+            height: 25px;
+        }
+
+        &__title {
+            margin-bottom: 20px;
+            line-height: 130%;
+        }
+
+        &__subtitle {
+            margin-bottom: 120px;
+        }
+
+        &__content {
+            max-width: 565px;
+            padding: 25px 0;
+        }
+
+        &__button {
+            height: auto;
+            flex-direction: column;
+
+            &-buy {
+                max-width: 100%;
+                height: 35px;
+                margin-bottom: 16px;
+                margin-right: 0;
+            }
+
+            &-reg {
+                max-width: 100%;
+                height: 35px;
+            }
+        }
+    }
+
+}

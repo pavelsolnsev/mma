@@ -1,0 +1,21 @@
+.news {
+
+   @include vw("padding-bottom: 100px;");
+   &.news-post {
+       padding-top: 45px;
+       padding-bottom: 0;
+   }
+   &__box {
+       @include vw("max-width: 1490px;");
+       @include vw("margin: 0 -15px");
+   }
+
+   &__col {
+       @include vw("margin-bottom: 45px;");
+       @include vw("padding: 0 15px");
+   }
+
+   &__title {
+       @include vw("margin-bottom: 52px;");
+   }
+}

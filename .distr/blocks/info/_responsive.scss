@@ -1,0 +1,35 @@
+.info {
+    @media (max-width: 1440px) {
+
+    }
+
+    @media (max-width: 1199px) {
+        
+    }
+    @media (max-width: 575px) {
+        padding: 0 0 45px;
+        &__img {
+            max-width: 110px;
+            margin-bottom: 0;
+            margin-right: 10px;
+        }
+
+        &__col {
+            margin-bottom: 30px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &__item {
+            display: flex;
+            align-items: center;
+        }
+
+        &__wrap {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
+
+}

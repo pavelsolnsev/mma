@@ -1,0 +1,14 @@
+.info {
+    padding: 0 0 60px;
+    &__title {
+        @include adaptiv-value("margin-bottom", 60, 40, 30);
+        @include adaptiv-value("margin-bottom", 60, 40, 30);
+        @include adaptiv-value("font-size", 42, 28, 20);
+    }
+
+    &__img {
+        @include adaptiv-value("margin-bottom", 32, 16, 16);
+        flex: 0 0 auto;
+    }
+
+}

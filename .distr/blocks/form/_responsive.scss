@@ -1,0 +1,50 @@
+.form {
+
+    @media (max-width: 1700px) {
+
+    }
+
+    @media (max-width: 1199px) {
+        &__button {
+            height: 30px;
+            
+        }
+        &__input {
+            height: 28px;
+        }
+
+        &__item {
+            &:last-child {
+                max-width: 112px;
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+            &__item {
+                margin-right: 8px;
+                &:last-child {
+                    max-width: 127px;
+                }
+            }
+
+            &__title {
+                margin-bottom: 16px;
+            }
+
+            &__footer {
+                &-text {
+                    font-size: 12px;
+                    line-height: 15px;
+                }
+
+                &-checkbox {
+                    top: 2px;
+                }
+            }
+        }
+
+        @media (max-width: 575px) {
+      
+        }
+    }

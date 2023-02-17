@@ -1,0 +1,58 @@
+.broadcast-3 {
+    @media (max-width: 1440px) {
+    }
+
+    @media (max-width: 1199px) {
+
+    }
+
+    @media (max-width: 992px) {
+        &__wrapper {
+            margin: 0 -5px 20px -5px;
+        }
+        &__col {
+            flex: 0 0 33.3333%;
+            max-width: 33.3333%;
+            padding: 0 5px 15px 5px;
+        }
+    }
+
+    @media (max-width: 991px) {
+    }
+
+    @media (max-width: 767px) {
+
+    }
+
+    @media (max-width: 575px) {
+
+        &__title {
+            font-size: 19px;
+            line-height: 130%;
+        }
+
+        &__button {
+            max-width: 312px;
+            margin: 0 auto 70px auto;
+        }
+
+        &__breadcrumbs {
+            display: block;
+            width: 40px;
+            height: 40px;
+            background: #414552;
+            border-radius: 4px;
+            position: relative;
+            &:after {
+                content: url('../img/broadcast-3/breadcrumbs.svg') ;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            span, img {
+                display: none;
+            }
+        }
+    }
+}

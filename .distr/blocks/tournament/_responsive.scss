@@ -1,0 +1,228 @@
+.tournament {
+    @media (max-width: 1199px) {
+    }
+    @media (max-width: 1450px) {
+        &__title {
+            margin-bottom: 20px;
+        }
+        &__tabs {
+            margin-bottom: 24px;
+        }
+
+        &__bg {
+            padding: 32px;
+            &-tabs {
+                margin-bottom: 80px;
+            }
+
+            &-item {
+                max-width: 72px;
+                height: 25px;
+                font-size: 18px;
+                margin-right: 67px;
+            }
+            &-icon {
+                svg {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+        &__grid {
+            &-box {
+                max-width: 144px;
+                &.box_1 {
+                    .tournament__grid-item {
+                        &::after {
+                            background: url("../img/tournament/line.svg") no-repeat center center / cover;
+                            width: 37px;
+                            height: 78px;
+                        }
+                    }
+                }
+                &.box_2 {
+                    .tournament__grid-item {
+                        &::after {
+                            background: url("../img/tournament/line-2.svg") no-repeat center center / cover;
+                            width: 42px;
+                            height: 156px;
+                        }
+                    }
+                }
+                &.box_3 {
+                    .tournament__grid-item {
+                        &::after {
+                            background: url("../img/tournament/line-3.svg") no-repeat center center / cover;
+                            width: 40px;
+                            height: 312px;
+                        }
+                    }
+                }
+                &.box_4 {
+                    .tournament__grid-item {
+                        &::after {
+                            background: url("../img/tournament/line-4.svg") no-repeat center center / cover;
+                            width: 43px;
+                            height: 624px;
+                        }
+                    }
+                }
+            }
+            &-item {
+                margin-bottom: 10px;
+            }
+        }
+
+        .tournament-card {
+            border-radius: 4.68878px;
+            padding: 5px 8px;
+            margin-bottom: 10px;
+
+            &::before {
+                width: 4px;
+                border-radius: 4.68878px 0px 0px 4.68878px;
+            }
+            &__item {
+                &-img {
+                    height: 15px;
+                    width: 15px;
+                }
+                &-name {
+                    font-size: 12px;
+                }
+
+                &-flag {
+                    height: 5px;
+                    width: 7px;
+                }
+            }
+        }
+    }
+    @media (max-width: 991px) {
+        &__grid {
+            &-box {
+                &.box_1 {
+                    .tournament__grid-item {
+                        &::after {
+                            width: 24px;
+                            height: 73px;
+                        }
+                    }
+                }
+                &.box_2 {
+                    .tournament__grid-item {
+                        &::after {
+                            width: 24px;
+                            height: 144px;
+                        }
+                    }
+                }
+                &.box_3 {
+                    .tournament__grid-item {
+                        &::after {
+                            width: 24px;
+                            height: 287px;
+                        }
+                    }
+                }
+                &.box_4 {
+                    .tournament__grid-item {
+                        &::after {
+                            width: 22px;
+                            height: 574px;
+                        }
+                    }
+                }
+            }
+            &-item {
+                margin-bottom: 10px;
+            }
+        }
+        .tournament-card {
+            &__item {
+                &-img {
+                    height: 12px;
+                    width: 12px;
+                }
+                &-name {
+                    font-size: 9px;
+                    margin-left: 5px;
+                }
+
+                &-flag {
+                    height: 5px;
+                    width: 7px;
+                }
+            }
+        }
+    }
+    @media (max-width: 767px) {
+        &__tabs {
+            li {
+                font-size: 18px;
+                margin-right: 22px;
+            }
+        }
+        &__bg {
+            &-tabs {
+                margin-bottom: 38px;
+            }
+
+            &-item {
+                max-width: 49px;
+                height: 19px;
+                font-size: 16px;
+                margin-right: 21px;
+            }
+            &-icon {
+                svg {
+                    width: 19px;
+                    height: 19px;
+                }
+            }
+        }
+        &__grid {
+            display: block;
+            &-box {
+                max-width: 320px;
+                margin-right: 0;
+                display: none;
+                &.current {
+                    display: block;
+                }
+            }
+            &-item {
+                margin-bottom: 21px;
+                &::after {
+                    display: none;
+                }
+            }
+        }
+        .tournament-card {
+            margin-bottom: 21px;
+            border-radius: 10.4348px;
+            padding: 5px 20px;
+            &::before {
+                border-radius: 8.69565px 0px 0px 8.69565px;
+                width: 10px;
+            }
+            &__item {
+                &-img {
+                    height: 30px;
+                    width: 30px;
+                }
+                &-name {
+                    font-size: 18px;
+                    margin-left: 13px;
+                }
+
+                &-flag {
+                    height: 12px;
+                    width: 16px;
+                }
+            }
+        }
+    }
+    @media (max-width: 575px) {
+    }
+}

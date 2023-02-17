@@ -1,0 +1,93 @@
+.articles {
+    @include vw("padding: 60px 0 80px;");
+    position: relative;
+    &__blockright {
+        width: 100%;
+        display: flex;
+        @include vw("margin-bottom: 60px;");
+    }
+
+    &__blockleft {
+        display: flex;
+        @include vw("margin-bottom: 60px;");
+    }
+
+    &__img {
+        @include vw("max-width: 370px;");
+        @include vw("height: 679px;");
+        margin-left: 4%;
+        width: 100%;
+        position: relative;
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-right: 5%;
+    }
+
+    /*  NEWS */
+    &__news {
+        &-title {
+            @include adaptiv-value("margin-bottom", 26, 20, 20);
+        }
+        &-main {
+            @include vw("margin-bottom: 70px;");
+            img {
+                @include vw("margin-bottom: 20px;");
+            }
+
+            span {
+                display: block;
+                @include vw("margin-bottom: 10px;");
+            }
+
+            h3 {
+                font-family: $DrukTextWideCyr;
+                font-weight: 500;
+                @include adaptiv-value("font-size", 22, 12, 16);
+                @include vw("max-width: 590px;");
+                line-height: 140%;
+            }
+        }
+
+    }
+
+    /*  NEWS FINAL */
+
+    /*  VIDEO */
+    &__video {
+        @include vw("max-width: 370px;");
+        width: 100%;
+
+        &-title {
+            font-family: $DrukTextWideCyr;
+            font-weight: 700;
+            @include adaptiv-value("font-size", 28, 14, 24);
+            @include adaptiv-value("margin-bottom", 32, 24, 30);
+            color: #232323;
+        }
+
+        &-item {
+            display: block;
+            @include vw("margin-bottom: 40px;");
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+        }
+
+        &-img {
+            position: relative;
+            margin-bottom: 5%;
+        }
+    }
+
+    /*  VIDEO FINAL */
+}

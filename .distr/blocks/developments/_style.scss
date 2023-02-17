@@ -1,0 +1,35 @@
+.developments {
+    @include adaptiv-value("padding-top", 80, 40, 40);
+    &__wrapper {
+        max-width: 1217px;
+        width: 100%;
+    }
+    
+    &__item {
+        display: flex;
+        align-items: center;
+        background: #fff;
+        padding: 20px;
+        
+        margin-bottom: 30px;
+        img {
+            margin-right: 48px;
+        }
+
+        h3 {
+            font-weight: 700;
+            line-height: 130%;
+            @include adaptiv-value("font-size", 30, 20, 12);
+        }
+
+        p {
+            @include adaptiv-value("font-size", 18, 16, 10);
+            line-height: 130%;
+            display: block;
+        }
+
+        &-text {
+            margin-bottom: 8px;
+        }
+    }
+}

@@ -1,0 +1,72 @@
+.fights-mob {
+@media (max-width: 1199px) {
+    &__content {
+
+
+        &-img {
+            width: 91px;
+            height: 70px;
+        }
+    }
+
+    &__button {
+        max-width: 117px;
+        height: 24px;
+        margin: 10px auto 0 auto;
+        font-size: 9.27823px;
+    }
+}
+@media (max-width: 991px) {
+}
+@media (max-width: 767px) {
+    &__content {
+
+
+        &-img {
+            width: 61px;
+            height: 50px;
+        }
+    }
+}
+@media (max-width: 575px) {
+    max-width: 100%;
+    border-radius: 12px;
+    padding: 14px 0 14px 20px;
+    &__item {
+        padding-top: 17px;
+        border-radius: 10.3449px;
+        margin-bottom: 0;
+        margin-right: 10px;
+        &:after {
+            height: 41px;
+        }
+    }
+
+    &__content {
+        &-img {
+            width: 112px;
+            height: 86px;
+        }
+    }
+
+    &__head {
+        padding-left: 17px;
+    }
+
+    &__vs {
+        max-width: 50px;
+        top: -50px;
+        left: 0;
+    }
+
+    &__button {
+        display: none;
+    }
+
+    .slick-list {
+        padding-right: 55px;
+    }
+}
+@media (max-width: 359px) {
+}
+}
